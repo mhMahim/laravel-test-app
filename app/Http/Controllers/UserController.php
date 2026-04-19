@@ -43,7 +43,13 @@ class UserController extends Controller
      */
     public function edit(string $id)
     {
-        return "'edit user'. $id";
+
+        $context = [
+            'id' => $id,
+            'name' => 'John Doe',
+        ];
+
+        return view('home.new', $context);
     }
 
     /**
